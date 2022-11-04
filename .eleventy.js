@@ -13,7 +13,7 @@ module.exports = function(eleventyConfig) {
 		// Use this pathPrefix if using a custom domain so that 
 		// Production builds generate links using the root:
 		// pathPrefix: isProduction ? "" : "/{repository-name}/",
-		pathPrefix: "/11ty-web-template/",
+		pathPrefix: "/fare-capping/",
 		dir: {
 			input: "src",
 			output: "docs"

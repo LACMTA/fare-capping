@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "11ty web template"
+title: "Metro Fare Capping"
 css: 
   - '/assets/uswds/css/styles.css'
   - 'css/site.css'
@@ -11,16 +11,75 @@ js-footer:
   - 'js/site.js'
 ---
 
-<div class="usa-section">
-	<div class="grid-container">
-	  	<div class="grid-row grid-gap">
-			<div class="">
-				<h1>{{ title }}</h1>
 
-				<p class="usa-intro">
-					Text here.
-				</p>
-			</div>
-	  	</div>
+<div class="grid-row grid-gap padding-x-8 padding-top-2">
+	<div class="grid-col-12">
+		<p class="site-subheading">Metro is proposing Fare Changes</p>
+		<h1>How Will Fare Changes Impact You?</h1>
+	</div>
+</div>
+
+<img src="{{ 'img/boarding-bus.png' | url }}" class="image-large" alt="photo of riders boarding a Metro bus">
+
+<div class="grid-row grid-gap padding-x-8 padding-y-2">
+	<div class="grid-col-8">
+		<p>Metro is proposing a simpler fare system where no rider ever overpays, and our most frequent riders who rely on the system pay less when they use TAP.</p>
+
+		<form id="theForm">
+			<fieldset class="usa-fieldset">
+				<legend class="usa-legend">
+					<h2>On average, how do you pay for Metro trips?</h2>
+				</legend>
+				<div class="usa-radio">
+					<input
+						class="usa-radio__input"
+						id="payment-cash"
+						type="radio"
+						name="payment-methods"
+						value="cash"
+					/>
+					<label class="usa-radio__label" for="payment-cash">Cash</label>
+				</div>
+				<div class="usa-radio">
+					<input
+						class="usa-radio__input"
+						id="payment-tap-regular"
+						type="radio"
+						name="payment-methods"
+						value="tap-regular"
+					/>
+					<label class="usa-radio__label" for="payment-tap-regular">TAP - Regular</label>
+				</div>
+				<div class="usa-radio">
+					<input
+						class="usa-radio__input"
+						id="payment-tap-discount"
+						type="radio"
+						name="payment-methods"
+						value="tap-discount"
+					/>
+					<label class="usa-radio__label" for="payment-tap-discount">TAP - Discount Fare</label>
+				</div>
+			</fieldset>
+
+			<fieldset class="usa-fieldset">
+				<legend class="usa-legend">
+					<h2>On average, how many Metro buses and trains do you take daily (including transfers)?</h2>
+				</legend>
+				<label>Metro rides per day:</label>
+				<input id="rides-per-day" class="usa-input" type="number" min="1" required>
+			</fieldset>
+
+			<fieldset class="usa-fieldset">
+				<legend class="usa-legend">
+					<h2>On average, how many days a week do you ride like this?</h2>
+				</legend>
+				<label>Days per week:</label>
+				<input id="days-per-week" class="usa-input" type="number" min="1" max="7" required>
+			</fieldset>
+
+			<button id="results" type="button" class="usa-button margin-top-2">See Results</button>
+			
+		</form>
 	</div>
 </div>

@@ -106,10 +106,11 @@ body {
   letter-spacing: 0.05px;
   line-height: 22px;
   padding: 10px 0px 10px 10px;
-}
-.header-bar__translate-presentation img {
-  margin-right: 6px;
-  width: 16px;
+
+  img {
+    margin-right: 6px;
+    width: 16px;
+  }
 }
 
 @media (max-width: 640px) {
@@ -132,10 +133,10 @@ body {
   color: #fff;
   background-color: #000;
   overflow: visible;
-}
 
-.usa-footer__secondary-section a {
-  color: #fff;
+  a {
+    color: #fff;
+  }
 }
 
 .site-subheading {

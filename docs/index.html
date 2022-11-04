@@ -1,32 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+  <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	
-		<link rel="stylesheet" href="/11ty-web-template/assets/uswds/css/styles.css">
+		<link rel="stylesheet" href="/fare-capping/assets/uswds/css/styles.css">
 	
 		<link rel="stylesheet" href="css/site.css">
 	
 
 
 	
-		<script src="/11ty-web-template/assets/uswds/js/uswds-init.min.js" ></script>
+		<script src="/fare-capping/assets/uswds/js/uswds-init.min.js" ></script>
 	
 
-	<title>11ty web template</title>
+	<title>Metro Fare Capping</title>
 </head>
 
-<body>
-	<div class="container-outer display-flex flex-column">
-		<header class="usa-header usa-header--basic">
+    <body>
+    <div class="container-outer display-flex flex-column">
+      <header class="usa-header usa-header--basic">
 	<div class="nav-container">
 		<div class="navbar">
 			<div class="logo" id="-logo">
-				<img src="/11ty-web-template/img/metro_logo_white.svg" role="img"
+				<img src="/fare-capping/img/metro_logo_white.svg" role="img"
 						alt="Metro logo" />
 			</div>
 		</div>
@@ -39,7 +39,7 @@
 				<div class="header-bar__translate-presentation">
 					<button class="translate-button" aria-expanded="false">
 						<svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
-							<use xlink:href="/11ty-web-template/assets/uswds/img/sprite.svg#translate"></use>
+							<use xlink:href="/fare-capping/assets/uswds/img/sprite.svg#translate"></use>
 						</svg>
 						<span>Translate</span>
 					</button>
@@ -49,30 +49,88 @@
 	</div>
 </header>
 
-		<div class="flex-1 display-flex flex-column">
-			
-<div class="usa-section">
-	<div class="grid-container">
-	  	<div class="grid-row grid-gap">
-			<div class="">
-				<h1>11ty web template</h1>
+      <div class="flex-1">
+        
 
-				<p class="usa-intro">
-					Text here.
-				</p>
-			</div>
-	  	</div>
+<div class="grid-row grid-gap padding-x-8 padding-top-2">
+	<div class="grid-col-12">
+		<p class="site-subheading">Metro is proposing Fare Changes</p>
+		<h1>How Will Fare Changes Impact You?</h1>
 	</div>
 </div>
 
-		</div>
-		<footer class="usa-footer">
+<img src="img/boarding-bus.png" class="image-large" alt="photo of riders boarding a Metro bus">
+
+<div class="grid-row grid-gap padding-x-8 padding-y-2">
+	<div class="grid-col-8">
+		<p>Metro is proposing a simpler fare system where no rider ever overpays, and our most frequent riders who rely on the system pay less when they use TAP.</p>
+
+		<form id="theForm">
+			<fieldset class="usa-fieldset">
+				<legend class="usa-legend">
+					<h2>On average, how do you pay for Metro trips?</h2>
+				</legend>
+				<div class="usa-radio">
+					<input
+						class="usa-radio__input"
+						id="payment-cash"
+						type="radio"
+						name="payment-methods"
+						value="cash"
+					/>
+					<label class="usa-radio__label" for="payment-cash">Cash</label>
+				</div>
+				<div class="usa-radio">
+					<input
+						class="usa-radio__input"
+						id="payment-tap-regular"
+						type="radio"
+						name="payment-methods"
+						value="tap-regular"
+					/>
+					<label class="usa-radio__label" for="payment-tap-regular">TAP - Regular</label>
+				</div>
+				<div class="usa-radio">
+					<input
+						class="usa-radio__input"
+						id="payment-tap-discount"
+						type="radio"
+						name="payment-methods"
+						value="tap-discount"
+					/>
+					<label class="usa-radio__label" for="payment-tap-discount">TAP - Discount Fare</label>
+				</div>
+			</fieldset>
+
+			<fieldset class="usa-fieldset">
+				<legend class="usa-legend">
+					<h2>On average, how many Metro buses and trains do you take daily (including transfers)?</h2>
+				</legend>
+				<label>Metro rides per day:</label>
+				<input id="rides-per-day" class="usa-input" type="number" min="1" required>
+			</fieldset>
+
+			<fieldset class="usa-fieldset">
+				<legend class="usa-legend">
+					<h2>On average, how many days a week do you ride like this?</h2>
+				</legend>
+				<label>Days per week:</label>
+				<input id="days-per-week" class="usa-input" type="number" min="1" max="7" required>
+			</fieldset>
+
+			<button id="results" type="button" class="usa-button margin-top-2">See Results</button>
+			
+		</form>
+	</div>
+</div>
+      </div>
+      <footer class="usa-footer">
   <div class="usa-footer__secondary-section">
     <div class="grid-container">
       <div class="grid-row grid-gap">
         <div class="usa-footer__logo grid-row tablet:grid-col-5 tablet:grid-gap-2">
           <div class="grid-col-4 tablet:grid-col-12">
-            <img src="/11ty-web-template/img/metro_logo_white.svg" role="img" alt="Metro logo"/>
+            <img src="/fare-capping/img/metro_logo_white.svg" role="img" alt="Metro logo"/>
           </div>
           <div class="usa-footer__social-links grid-col-8 tablet:grid-col-12 grid-row grid-gap-1 display-flex flex-row flex-justify-end tablet:flex-justify-start">
             <div class="grid-col-auto">
@@ -103,30 +161,33 @@
     </div>
   </div>
 </footer>
-	</div>
+    </div>
 
-	
-	
-		<script src="/11ty-web-template/assets/uswds/js/uswds.min.js"></script>
-	
-		<script src="js/site.js"></script>
-	
 
-	<!-- Google Translate -->
-	<script src="/11ty-web-template/js/translate.js"></script>
-	<script>
-		function googleTranslateElementInit() {
-			new google.translate.TranslateElement({
-				pageLanguage: 'en',
-				includedLanguages: 'en,es,zh-CN,zh-TW,ko,vi,ja,ru,hy',
-				layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-				autoDisplay: false,
-				gaTrack: true,
-				gaId: 'UA-10002990-1',
-			}, 'google_translate_element');
-		}
-	</script>
-	<script type="text/javascript"
-	src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit&amp;ver=1.86"></script>
-</body>
+    
+      <script src="/fare-capping/assets/uswds/js/uswds.min.js"></script>
+    
+      <script src="js/site.js"></script>
+    
+
+    <!-- Google Translate -->
+    <script src="/fare-capping/js/translate.js"></script>
+    <script>
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+          pageLanguage: 'en',
+          includedLanguages: 'en,es,zh-CN,zh-TW,ko,vi,ja,ru,hy',
+          layout: google
+            .translate
+            .TranslateElement
+            .InlineLayout
+            .SIMPLE,
+          autoDisplay: false,
+          gaTrack: true,
+          gaId: 'UA-10002990-1'
+        }, 'google_translate_element');
+      }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit&amp;ver=1.86"></script>
+  </body>
 </html>
