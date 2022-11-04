@@ -9,7 +9,7 @@
 	
 		<link rel="stylesheet" href="/fare-capping/assets/uswds/css/styles.css">
 	
-		<link rel="stylesheet" href="/fare-capping/css/site.css">
+		<link rel="stylesheet" href="css/site.css">
 	
 
 
@@ -75,7 +75,7 @@
 						class="usa-radio__input"
 						id="payment-cash"
 						type="radio"
-						name="payment-method"
+						name="payment-methods"
 						value="cash"
 					/>
 					<label class="usa-radio__label" for="payment-cash">Cash</label>
@@ -85,7 +85,7 @@
 						class="usa-radio__input"
 						id="payment-tap-regular"
 						type="radio"
-						name="payment-method"
+						name="payment-methods"
 						value="tap-regular"
 					/>
 					<label class="usa-radio__label" for="payment-tap-regular">TAP - Regular</label>
@@ -95,7 +95,7 @@
 						class="usa-radio__input"
 						id="payment-tap-discount"
 						type="radio"
-						name="payment-method"
+						name="payment-methods"
 						value="tap-discount"
 					/>
 					<label class="usa-radio__label" for="payment-tap-discount">TAP - Discount Fare</label>
@@ -107,7 +107,7 @@
 					<h2>On average, how many Metro buses and trains do you take daily (including transfers)?</h2>
 				</legend>
 				<label>Metro rides per day:</label>
-				<input name="rides-per-day" class="usa-input" type="number" min="1" required>
+				<input id="rides-per-day" class="usa-input" type="number" min="1" required>
 			</fieldset>
 
 			<fieldset class="usa-fieldset">
@@ -115,7 +115,7 @@
 					<h2>On average, how many days a week do you ride like this?</h2>
 				</legend>
 				<label>Days per week:</label>
-				<input name="days-per-week" class="usa-input" type="number" min="1" max="7" required>
+				<input id="days-per-week" class="usa-input" type="number" min="1" max="7" required>
 			</fieldset>
 
 			<button id="results" type="button" class="usa-button margin-y-4">See Results</button>
@@ -208,7 +208,7 @@
     
       <script src="/fare-capping/assets/uswds/js/uswds.min.js"></script>
     
-      <script src="/fare-capping/js/index.js"></script>
+      <script src="js/index.js"></script>
     
 
     <!-- Google Translate -->

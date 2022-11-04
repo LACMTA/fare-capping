@@ -3,12 +3,12 @@ layout: default
 title: "Metro Fare Capping"
 css: 
   - '/assets/uswds/css/styles.css'
-  - 'css/site.css'
+  - '/css/site.css'
 js-head: 
   - '/assets/uswds/js/uswds-init.min.js'
 js-footer:
   - '/assets/uswds/js/uswds.min.js'
-  - 'js/site.js'
+  - '/js/index.js'
 ---
 
 
@@ -35,7 +35,7 @@ js-footer:
 						class="usa-radio__input"
 						id="payment-cash"
 						type="radio"
-						name="payment-methods"
+						name="payment-method"
 						value="cash"
 					/>
 					<label class="usa-radio__label" for="payment-cash">Cash</label>
@@ -45,7 +45,7 @@ js-footer:
 						class="usa-radio__input"
 						id="payment-tap-regular"
 						type="radio"
-						name="payment-methods"
+						name="payment-method"
 						value="tap-regular"
 					/>
 					<label class="usa-radio__label" for="payment-tap-regular">TAP - Regular</label>
@@ -55,7 +55,7 @@ js-footer:
 						class="usa-radio__input"
 						id="payment-tap-discount"
 						type="radio"
-						name="payment-methods"
+						name="payment-method"
 						value="tap-discount"
 					/>
 					<label class="usa-radio__label" for="payment-tap-discount">TAP - Discount Fare</label>
@@ -67,7 +67,7 @@ js-footer:
 					<h2>On average, how many Metro buses and trains do you take daily (including transfers)?</h2>
 				</legend>
 				<label>Metro rides per day:</label>
-				<input id="rides-per-day" class="usa-input" type="number" min="1" required>
+				<input name="rides-per-day" class="usa-input" type="number" min="1" required>
 			</fieldset>
 
 			<fieldset class="usa-fieldset">
@@ -75,10 +75,10 @@ js-footer:
 					<h2>On average, how many days a week do you ride like this?</h2>
 				</legend>
 				<label>Days per week:</label>
-				<input id="days-per-week" class="usa-input" type="number" min="1" max="7" required>
+				<input name="days-per-week" class="usa-input" type="number" min="1" max="7" required>
 			</fieldset>
 
-			<button id="results" type="button" class="usa-button margin-top-2">See Results</button>
+			<button id="results" type="button" class="usa-button margin-y-4">See Results</button>
 		</form>
 	</div>
 </div>
