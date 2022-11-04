@@ -119,8 +119,12 @@ body {
   }
 }
 
-.section-highlight {
-  background-color: #e5f1fe;
+.metro-section--gray {
+  background-color: #F5F7FB;
+}
+
+.metro-section--blue {
+  background-color: #E5F1FE;
 }
 
 .container-outer {
@@ -238,6 +242,13 @@ svg.usa-search__submit-icon {
 .flex-reverse-row {
   display: flex;
   flex-direction: row-reverse;
+}
+
+.image-fit-height {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .image-large {
