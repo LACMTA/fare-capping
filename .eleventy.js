@@ -5,6 +5,7 @@ module.exports = function(eleventyConfig) {
 	eleventyConfig.addPassthroughCopy("src/js");
 	eleventyConfig.addPassthroughCopy("src/img");
 	eleventyConfig.addPassthroughCopy("assets/uswds");
+	eleventyConfig.addPassthroughCopy("src/favicon.ico");
 
 	// Uncomment if using a custom domain with GitHub Pages
 	// eleventyConfig.addPassthroughCopy("CNAME");
@@ -17,7 +18,7 @@ module.exports = function(eleventyConfig) {
 		dir: {
 			input: "src",
 			output: "docs",
-			data: "_data"
+			data: "data"
 		}
 	};
 };

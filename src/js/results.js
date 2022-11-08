@@ -82,14 +82,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const RESULTS_WEEKLY_COST = document.querySelector('#weekly-cost');
     const RESULTS_WEEKLY_RIDES = document.querySelector('#weekly-rides');
 
-    const COST = document.querySelectorAll('.cost');
-
     RESULTS_DAILY_RIDES.textContent = RIDES_PER_DAY;
     RESULTS_WEEKLY_RIDES.textContent = RIDES_PER_DAY * DAYS_PER_WEEK;
 
     let capped_daily_rides, capped_daily_cost, capped_weekly_rides, capped_weekly_cost, fare, weekly_rides;
-    let daily_cap_met = false;
-    let weekly_cap_met = false;
 
     if (RESULTS_PAGE == 'cash') {
         fare = REGULAR_FARE;
@@ -104,10 +100,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         if (RIDES_PER_DAY > 3) {
-            daily_cap_met = true;
             capped_daily_rides = 3;
         } else {
-            daily_cap_met = false;
+            document.querySelector('#daily-cap-not-met').innerHTML += '<br>Daily fare cap of $' + fare * 3 + ' not met.';
             capped_daily_rides = RIDES_PER_DAY;
         }
 
@@ -116,10 +111,9 @@ document.addEventListener('DOMContentLoaded', () => {
         weekly_rides = RIDES_PER_DAY * DAYS_PER_WEEK;
 
         if (capped_daily_rides * DAYS_PER_WEEK > 10) {
-            weekly_cap_met = true;
             capped_weekly_rides = 10;
         } else {
-            weekly_cap_met = false;
+            document.querySelector('#weekly-cap-not-met').innerHTML += '<br>Weekly cap of $' + fare * 10 + ' not met.';
             capped_weekly_rides =  capped_daily_rides * DAYS_PER_WEEK;
         }
         
@@ -129,16 +123,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
     RESULTS_DAILY_COST.textContent = '$' + capped_daily_cost;
     RESULTS_WEEKLY_COST.textContent = '$' + capped_weekly_cost;
-
-    if (!daily_cap_met) {
-        document.querySelector('#daily-cap-not-met').innerHTML += '<br>Daily fare cap of $' + fare * 3 + ' not met.';
-    }
-
-    if (!weekly_cap_met) {
-        document.querySelector('#weekly-cap-not-met').innerHTML += '<br>Weekly cap of $' + fare * 10 + 'not met.';
-    }
-
-    for (let elem in COST) {
-        COST[elem].textContent = '$' + fare;
-    }
 });
