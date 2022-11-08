@@ -62,13 +62,13 @@
 <img src="img/boarding-bus.png" class="image-large" alt="photo of a Metro bus with three people waiting to board">
 
 <div class="grid-row grid-gap padding-x-8 padding-y-2">
-	<div class="grid-col-8">
+	<div class="tablet:grid-col-8">
 		<p>Metro is proposing a more simple fare structure where no rider ever overpays and our most frequent riders who rely on the system pay less with TAP.</p>
 
 		<form id="theForm">
-			<fieldset class="usa-fieldset">
-				<legend class="usa-legend">
-					<h2>On average, how do you pay for your Metro trips?</h2>
+			<fieldset class="usa-fieldset margin-bottom-4 margin-top-4">
+				<legend class="usa-legend font-sans-lg text-semibold">
+					On average, how do you pay for your Metro trips?
 				</legend>
 				<div class="usa-radio">
 					<input
@@ -105,65 +105,69 @@
 				</div>
 			</fieldset>
 
-			<fieldset class="usa-fieldset">
-				<legend class="usa-legend">
-					<h2>On average, how many Metro buses and trains do you take daily (including transfers)?</h2>
+			<fieldset class="usa-fieldset margin-bottom-4">
+				<legend class="usa-legend font-sans-lg text-semibold">
+					On average, how many Metro buses and trains do you take daily (including transfers)?
 				</legend>
 				<label>Metro rides per day:</label>
 				<input name="rides-per-day" class="usa-input" type="number" min="1" required>
 			</fieldset>
 
-			<fieldset class="usa-fieldset">
-				<legend class="usa-legend">
-					<h2>On average, how many days per week do you ride Metro?</h2>
+			<fieldset class="usa-fieldset margin-bottom-4">
+				<legend class="usa-legend font-sans-lg text-semibold">
+					On average, how many days per week do you ride Metro?
 				</legend>
 				<label>Days per week:</label>
 				<input name="days-per-week" class="usa-input" type="number" min="1" max="7" required>
 			</fieldset>
 
-			<button id="results" type="submit" class="usa-button margin-y-4">See Results</button>
+			<button id="results" type="submit" class="usa-button margin-bottom-4">See Results</button>
 		</form>
 	</div>
 </div>
 
 <div class="metro-section metro-section--gray">
-	<div class="grid-row">
-		<div class="grid-offset-1 padding-y-6">
-			<h2>Key Fare Changes</h2>
-			
-			<ul>
-				<li>Regular Fare for a single ride will cost $2 instead of $1.75.</li>
-				<li>Transfers will no longer be free</li>
-				<li>1-day, 7-day, and 30-day passes are going away.</li>
-				<li>Daily ($6) and weekly ($20) fare caps will activate when you use a TAP card.</li>
-			</ul>
+	<div class="grid-row grid-gap">
+		<div class="tablet:grid-offset-1 grid-col-auto">
+			<div class="padding-y-6 padding-x-8">
+				<h2>Key Fare Changes</h2>
+				
+				<ul>
+					<li>Regular Fare for a single ride will cost $2 instead of $1.75.</li>
+					<li>Transfers will no longer be free</li>
+					<li>1-day, 7-day, and 30-day passes are going away.</li>
+					<li>Daily ($6) and weekly ($20) fare caps will activate when you use a TAP card.</li>
+				</ul>
 
-			<p>Learn more about <a href="#">Proposed Fare Changes</a>.</p>
+				<p>Learn more about <a href="#">Proposed Fare Changes</a>.</p>
+			</div>
 		</div>
 	</div>
 </div>
 
 
 <div class="metro-section metro-section--blue">
-	<div class="grid-row">
-		<div class="grid-col-5">
-			<img src="img/rider-on-phone.png" alt="photo of a  rider smiling and looking at his phone" class="image-fit-height">
+	<div class="grid-row grid-gap">
+		<div class="tablet:grid-col-5">
+			<img src="img/rider-on-phone.png" alt="photo of a man with headphones on, smiling and looking at his phone" class="image-fit-height">
 		</div>
-		<div class="grid-offset-1 grid-col-6 padding-y-6">
-			<h2>Tell us what you think</h2>
+		<div class="tablet:grid-offset-1 tablet:grid-col-6">
+			<div class="padding-y-6 padding-x-8">
+				<h2>Tell us what you think</h2>
 
-			<p>Metro will hold a public hearing on Monday, Nov. 14, at 5pm and we want to hear from you. </p>
+				<p>Metro will hold a public hearing on Monday, Nov. 14, at 5pm and we want to hear from you. </p>
 
-			<ol>
-				<li><a href="#">Meeting link and public hearing details.</a></li>
-				<li>Can’t make it? Send your <a href="#">feedback by email</a> or write directly to:
-					<br><br>
-					Metro Board Clerk<br>
-					RE: Public Hearing on Metro Fare Changes<br>
-					1 Gateway Plaza, 99-3-1<br>
-					Los Angeles, CA 90012
-				</li>
-			</ol>
+				<ol>
+					<li><a href="#">Meeting link and public hearing details.</a></li>
+					<li>Can’t make it? Send your <a href="#">feedback by email</a> or write directly to:
+						<br><br>
+						Metro Board Clerk<br>
+						RE: Public Hearing on Metro Fare Changes<br>
+						1 Gateway Plaza, 99-3-1<br>
+						Los Angeles, CA 90012
+					</li>
+				</ol>
+			</div>
 		</div>
 	</div>
 </div>

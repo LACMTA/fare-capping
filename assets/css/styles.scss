@@ -3,6 +3,10 @@ body {
   height: 100%;
 }
 
+.text-semibold {
+  font-weight: 600;
+}
+
 .header {
   flex-direction: row;
   align-items: center;
@@ -305,7 +309,22 @@ svg.usa-search__submit-icon {
   }
 }
 
+h1 {
+  font-size: 64px;
+}
+
+h2 {
+  font-size: 36px;
+}
+
 @media screen and (max-width: 640px) {
+  h1 {
+    font-size: 48px;
+  }
+  h2 {
+    font-weight: 600;
+    font-size: 32px;
+  }
   .image-large {
     height: 300px;
   }
