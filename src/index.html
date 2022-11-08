@@ -37,6 +37,7 @@ js-footer:
 						type="radio"
 						name="payment-method"
 						value="cash"
+						required
 					/>
 					<label class="usa-radio__label" for="payment-cash">Cash</label>
 				</div>
@@ -47,6 +48,7 @@ js-footer:
 						type="radio"
 						name="payment-method"
 						value="tap-regular"
+						required
 					/>
 					<label class="usa-radio__label" for="payment-tap-regular">TAP - Regular</label>
 				</div>
@@ -57,6 +59,7 @@ js-footer:
 						type="radio"
 						name="payment-method"
 						value="tap-discount"
+						required
 					/>
 					<label class="usa-radio__label" for="payment-tap-discount">TAP - Discount Fare</label>
 				</div>
@@ -78,12 +81,12 @@ js-footer:
 				<input name="days-per-week" class="usa-input" type="number" min="1" max="7" required>
 			</fieldset>
 
-			<button id="results" type="button" class="usa-button margin-y-4">See Results</button>
+			<button id="results" type="submit" class="usa-button margin-y-4">See Results</button>
 		</form>
 	</div>
 </div>
 
-<div class="metro-section--gray">
+<div class="metro-section metro-section--gray">
 	<div class="grid-row">
 		<div class="grid-offset-1 padding-y-6">
 			<h2>Key Fare Changes</h2>
@@ -101,7 +104,7 @@ js-footer:
 </div>
 
 
-<div class="metro-section--blue">
+<div class="metro-section metro-section--blue">
 	<div class="grid-row">
 		<div class="grid-col-5">
 			<img src="{{ 'img/rider-on-phone.png' | url }}" alt="photo of a  rider smiling and looking at his phone" class="image-fit-height">

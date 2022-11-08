@@ -1,4 +1,6 @@
-document.querySelector('#results').addEventListener('click', (e) => {
+document.querySelector('#theForm').addEventListener('submit', (e) => {
+    e.preventDefault(); // prevents form submit default actions while still allowing validation
+    
     const data = new FormData(document.querySelector('#theForm'));
 
     const payment_method = data.get('payment-method');
@@ -27,5 +29,6 @@ document.querySelector('#results').addEventListener('click', (e) => {
     url += '&days=' + days_per_week;
 
     console.log(url);
-    window.location = url;
+    // FormData.setAttribute('action', url);
+    window.location.href = url;
 });

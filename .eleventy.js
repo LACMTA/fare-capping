@@ -16,7 +16,8 @@ module.exports = function(eleventyConfig) {
 		pathPrefix: "/fare-capping/",
 		dir: {
 			input: "src",
-			output: "docs"
+			output: "docs",
+			data: "_data"
 		}
 	};
 };
