@@ -7,6 +7,11 @@ body {
   font-weight: 600;
 }
 
+.results-heading {
+  font-size: 32px;
+  font-weight: 400;
+}
+
 .header {
   flex-direction: row;
   align-items: center;
@@ -303,7 +308,7 @@ svg.usa-search__submit-icon {
   }
 
   .metro-info-heading {
-    font-size: larger;
+    font-size: 24px;
     font-weight: bold;
     margin: 16px 0px;
   }
