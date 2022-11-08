@@ -11,17 +11,17 @@ const DISCOUNT_FARE = 1;
 
 
 document.addEventListener('DOMContentLoaded', () => {
-    const RESULTS_DAILY_COST = document.querySelector('#daily-cost');
-    const RESULTS_DAILY_RIDES = document.querySelector('#daily-rides');
+    const DAILY_COST = document.querySelector('#daily-cost');
+    const DAILY_RIDES = document.querySelector('#daily-rides');
 
-    const RESULTS_WEEKLY_COST = document.querySelector('#weekly-cost');
-    const RESULTS_WEEKLY_RIDES = document.querySelector('#weekly-rides');
+    const WEEKLY_COST = document.querySelector('#weekly-cost');
+    const WEEKLY_RIDES = document.querySelector('#weekly-rides');
 
     const DAILY_CAP = document.querySelector('#daily-cap');
     const WEEKLY_CAP = document.querySelector('#weekly-cap');
 
-    RESULTS_DAILY_RIDES.textContent = RIDES_PER_DAY;
-    RESULTS_WEEKLY_RIDES.textContent = RIDES_PER_DAY * DAYS_PER_WEEK;
+    DAILY_RIDES.textContent = RIDES_PER_DAY;
+    WEEKLY_RIDES.textContent = RIDES_PER_DAY * DAYS_PER_WEEK;
 
     let capped_daily_rides, capped_daily_cost, capped_weekly_rides, capped_weekly_cost, fare, weekly_rides;
 
@@ -31,8 +31,11 @@ document.addEventListener('DOMContentLoaded', () => {
         let daily_cost = RIDES_PER_DAY * fare;
         let weekly_cost = RIDES_PER_DAY * DAYS_PER_WEEK * fare;
 
-        RESULTS_DAILY_COST.textContent = '$' + daily_cost;
-        RESULTS_WEEKLY_COST.textContent = '$' + weekly_cost;
+        DAILY_COST.textContent = '$' + daily_cost;
+        DAILY_CAP.textContent = 'You will now pay $' + fare + ' per ride.';
+
+        WEEKLY_COST.textContent = '$' + weekly_cost;
+        WEEKLY_CAP.textContent = 'You will now pay $' + fare + ' per ride.';
     } else {
         if (RESULTS_PAGE == 'tap-regular') {
             fare = REGULAR_FARE;
@@ -69,7 +72,4 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         
     }
-
-    RESULTS_DAILY_COST.textContent = '$' + capped_daily_cost;
-    RESULTS_WEEKLY_COST.textContent = '$' + capped_weekly_cost;
 });
