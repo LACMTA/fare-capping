@@ -21,14 +21,12 @@ document.querySelector('#theForm').addEventListener('submit', (e) => {
         case 'tap-regular':
             url += 'tap-regular/';
             break;
-        case 'tap-discount':
-            url += 'tap-discount/';
+        case 'tap-reduced':
+            url += 'tap-reduced/';
             break;
     }
     url += '?rides=' + rides_per_day;
     url += '&days=' + days_per_week;
 
-    console.log(url);
-    // FormData.setAttribute('action', url);
     window.location.href = url;
 });

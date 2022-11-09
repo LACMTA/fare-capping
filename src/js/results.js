@@ -13,25 +13,6 @@ let DAILY_RIDES_PLURAL = RIDES_PER_DAY == 1 ? '' : 's';
 let WEEKLY_RIDES = RIDES_PER_DAY * DAYS_PER_WEEK;
 let WEEKLY_RIDES_PLURAL = WEEKLY_RIDES == 1 ? '' : 's';
 
-// function showPlurals() {
-//     if (RIDES_PER_DAY > 1) {
-//         let allDailyPlurals = document.querySelectorAll('.daily-rides-plural');
-
-//         for (let elem in allDailyPlurals) {
-//             allDailyPlurals[elem].textContent = 's';
-//         }
-//     }
-
-//     if (RIDES_PER_DAY * DAYS_PER_WEEK > 1) {
-//         let allWeeklyPlurals = document.querySelectorAll('.weekly-rides-plural');
-
-//         for (let elem in allWeeklyPlurals) {
-//             allWeeklyPlurals[elem].textContent = 's';
-//         }
-//     }
-// }
-
-
 document.addEventListener('DOMContentLoaded', () => {
     const DAILY_COST_HEADING = document.querySelector('#daily-cost-heading');
     const DAILY_COST_BODY = document.querySelector('#daily-cost-body');
@@ -39,21 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const WEEKLY_COST_HEADING = document.querySelector('#weekly-cost-heading');
     const WEEKLY_COST_BODY = document.querySelector('#weekly-cost-body');
 
-    // const DAILY_COST_LABEL = document.querySelector('#daily-cost');
-    // const DAILY_RIDES_LABEL = document.querySelector('#daily-rides');
-
-    // const WEEKLY_COST_LABEL = document.querySelector('#weekly-cost');
-    // const WEEKLY_RIDES_LABEL = document.querySelector('#weekly-rides');
-
-    // const DAILY_COST_DETAILS = document.querySelector('#daily-cost-details');
-    // const WEEKLY_COST_DETAILS = document.querySelector('#weekly-cost-details');
-
-    // populate number of rides in the labels
-    // DAILY_RIDES_LABEL.textContent = RIDES_PER_DAY;
-    // WEEKLY_RIDES_LABEL.textContent = RIDES_PER_DAY * DAYS_PER_WEEK;
-
-
-    let capped_daily_rides, capped_daily_cost, capped_weekly_rides, capped_weekly_cost, fare, weekly_rides;
+    let capped_daily_rides, capped_weekly_rides, capped_weekly_cost;
 
     switch (RESULTS_PAGE) {
         /*************************************/
@@ -76,12 +43,16 @@ document.addEventListener('DOMContentLoaded', () => {
         /*************************************/
         case 'tap-regular':
 
+            /**************/
+            /* daily cost */
+            /**************/
             if (RIDES_PER_DAY < 3) {  // under daily cap
 
                 capped_daily_rides = RIDES_PER_DAY;
 
                 DAILY_COST_HEADING.textContent = '$' + RIDES_PER_DAY * REGULAR_FARE + ' for ' + RIDES_PER_DAY + ' ride' + DAILY_RIDES_PLURAL;
                 DAILY_COST_BODY.innerHTML = "You will pay $" + REGULAR_FARE + " per ride for your first 3 rides. Every ride after will be FREE 🎁 that day!";
+
             } else if (RIDES_PER_DAY == 3) { // at daily cap
 
                 capped_daily_rides = 3;
@@ -101,6 +72,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
             }
 
+            /***************/
+            /* weekly cost */
+            /***************/
             capped_weekly_rides = capped_daily_rides * DAYS_PER_WEEK;
 
             if (capped_weekly_rides < 10) { // under weekly cap
@@ -145,10 +119,13 @@ document.addEventListener('DOMContentLoaded', () => {
             break;
         
         /*************************************/
-        /* TAP - discount                    */
+        /* TAP - reduced                    */
         /*************************************/
-        case 'tap-discount':
+        case 'tap-reduced':
 
+            /**************/
+            /* daily cost */
+            /**************/
             if (RIDES_PER_DAY < 3) {  // under daily cap
 
                 capped_daily_rides = RIDES_PER_DAY;
@@ -175,6 +152,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
             }
 
+            /***************/
+            /* weekly cost */
+            /***************/
             capped_weekly_rides = capped_daily_rides * DAYS_PER_WEEK;
 
             if (capped_weekly_rides < 8) { // under weekly cap
