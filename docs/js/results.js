@@ -55,6 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             DAILY_CAP.innerHTML = "You pay $" + capped_daily_cost + " for " + capped_daily_rides + " rides.<br>Daily fare cap of $" + fare * 3 + " was not met.";
         }
+        DAILY_COST.textContent = '$' + capped_daily_cost;
 
         weekly_rides = RIDES_PER_DAY * DAYS_PER_WEEK;
 
@@ -70,6 +71,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
             WEEKLY_CAP.innerHTML = "You pay $" + capped_weekly_cost + " for " + weekly_rides + " rides.<br>Weekly fare cap of $" + fare * 10 + " was not met.";
         }
-        
+        WEEKLY_COST.textContent = '$' + capped_weekly_cost;
     }
 });
