@@ -3,7 +3,7 @@
         "type": "cash",
         "typeLabel": "Cash",
         "cost": 2,
-        "tipsLabel": "TAP to lower your fares",
+        "tipsLabel": "Get TAP for lower fares",
         "tips": "<ul><li><p>Qualify for <a href='https://www.metro.net/riding/fares/#discounted-fares'>reduced fare</a> and each Metro trip would only cost $1.</p></li><li><p>With reduced-fare capping you would never pay more than $3 a day or $8 a week. Every ride after would be FREE.</p></li><li><p>With regular-fare capping you would never pay more than $6 a day or $20 a week.</p></li></ul>"
     },
     {
