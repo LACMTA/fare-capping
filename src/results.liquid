@@ -32,7 +32,7 @@ js-footer:
             <span id="daily-cost"></span>
             for
             <span id="daily-rides"></span>
-            rides
+            ride<span class="daily-rides-plural"></span>
           </div>
           <div class="metro-info-body">
             <p id="daily-cap"></p>
@@ -44,7 +44,7 @@ js-footer:
             <span id="weekly-cost"></span>
             for
             <span id="weekly-rides"></span>
-            rides
+            ride<span class="weekly-rides-plural"></span>
           </div>
           <div class="metro-info-body">
             <p id="weekly-cap"></p>
@@ -57,7 +57,7 @@ js-footer:
             <span class="emoji">&#128129;</span>
             Tips</div>
           <div class="metro-info-heading">
-            Lower your fares
+            {{ fares.tipsLabel }}
           </div>
           <div class="metro-info-body">
             {{ fares.tips }}

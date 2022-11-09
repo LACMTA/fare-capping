@@ -3,18 +3,21 @@
         "type": "cash",
         "typeLabel": "Cash",
         "cost": 2,
-        "tips": "<p>Sign up for a <a href='#'>reduced fare program</a> and each Metro trip would only cost $1.</p><p>With reduced-fare capping you would never pay more than $3 a day or $10 a week. Every ride after would be FREE.</p><p>With regular-fare capping you would never pay more than $6 a day or $20 a week.</p>"
+        "tipsLabel": "TAP to lower your fares",
+        "tips": "<ul><li><p>Qualify for <a href='#'>reduced fare</a> and each Metro trip would only cost $1.</p></li><li><p>With reduced-fare capping you would never pay more than $3 a day or $10 a week. Every ride after would be FREE.</p></li><li><p>With regular-fare capping you would never pay more than $6 a day or $20 a week.</p></li></ul>"
     },
     {
         "type": "tap-regular",
         "typeLabel": "TAP - Regular",
         "cost": 2,
-        "tips": "<p>Sign up for a <a href='#'>reduced fare program</a> and each Metro trip would only cost $1.</p><p>With fare capping you would never pay more than $6 a day or $20 a week.</p>"
+        "tipsLabel": "Lower your fares",
+        "tips": "<ul><li><p>Qualify for <a href='#'>reduced fare</a> and each Metro trip would only cost $1.</p></li><li><p>With fare capping you would never pay more than $6 a day or $20 a week.</p></li></ul>"
     },
     {
         "type": "tap-discount",
         "typeLabel": "TAP - Discount",
         "cost": 1,
-        "tips": "<p>With reduced fare capping never pay more than $3 a day or $10 a week.</p><p>Once you hit daily and weekly cap, all rides on Metro buses and trains are free.</p>"
+        "tipsLabel": "Lower your fares",
+        "tips": "<ul><li><p>With reduced fare capping never pay more than $3 a day or $10 a week.</p></li><li><p>Once you hit daily and weekly cap, all rides on Metro buses and trains are free.</p></li></ul>"
     }
 ]
