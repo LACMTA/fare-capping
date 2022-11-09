@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         weekly_rides = RIDES_PER_DAY * DAYS_PER_WEEK;
 
-        if (capped_daily_rides * DAYS_PER_WEEK > 10) { // WEEKLY FARE CAP MET
+        if (capped_daily_rides * DAYS_PER_WEEK >= 10) { // WEEKLY FARE CAP MET
             capped_weekly_rides = 10;
             capped_weekly_cost = capped_weekly_rides * fare;
 
