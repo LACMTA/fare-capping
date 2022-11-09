@@ -68,15 +68,13 @@ document.addEventListener('DOMContentLoaded', () => {
         } else if (RIDES_PER_DAY > 3) { // OVER DAILY FARE CAP
             capped_daily_rides = 3;
             capped_daily_cost = capped_daily_rides * fare;
-            saved_rides = RIDES_PER_DAY - 3;
+            let saved_rides = RIDES_PER_DAY - 3;
             
             if (saved_rides > 1) {
-                DAILY_CAP.innerHTML = "Congratulations, you hit your daily cap! 🎉 You gained " + saved_rides + " FREE 🎁 rides!";
+                DAILY_CAP.innerHTML = "Congratulations, you hit your daily cap! 🎉 You gained " + saved_rides + " FREE 🎁 rides per day!";
             } else {
-                DAILY_CAP.innerHTML = "Congratulations, you hit your daily cap! 🎉 You gained " + saved_rides + " FREE 🎁 ride!";
+                DAILY_CAP.innerHTML = "Congratulations, you hit your daily cap! 🎉 You gained " + saved_rides + " FREE 🎁 ride per day!";
             }
-
-            
 
         } else { // UNDER DAILY FARE CAP
             capped_daily_rides = RIDES_PER_DAY;
@@ -88,14 +86,38 @@ document.addEventListener('DOMContentLoaded', () => {
 
         weekly_rides = RIDES_PER_DAY * DAYS_PER_WEEK;
 
-        if (capped_daily_rides * DAYS_PER_WEEK >= 10) { // WEEKLY FARE CAP MET
+        if ((capped_daily_rides * DAYS_PER_WEEK) == 10) { // AT WEEKLY FARE CAP
             capped_weekly_rides = 10;
             capped_weekly_cost = capped_weekly_rides * fare;
 
+            WEEKLY_CAP.innerHTML = "Congratulations, you hit your weekly cap! 🎉 Every ride after is FREE 🎁!";
 
-            WEEKLY_CAP.innerHTML = "You pay $" + fare + " for your 10 rides weekly and every ride after is FREE 🎁 because you hit your weekly cap.";
+        } else if ((capped_daily_rides * DAYS_PER_WEEK) > 10) { // OVER WEEKLY FARE CAP
+            capped_weekly_rides = 10;
+            capped_weekly_cost = capped_weekly_rides * fare;
+            let free_daily_rides = 0;
+            let saved_rides = 0;
 
-        } else { // WEEKLY FARE CAP NOT MET
+            if (RIDES_PER_DAY > 3) {
+                free_daily_rides = RIDES_PER_DAY - 3;
+                if (DAYS_PER_WEEK < 4) {
+                    saved_rides = free_daily_rides * DAYS_PER_WEEK;
+                } else {
+                    saved_rides = free_daily_rides * 3;
+                    saved_rides += RIDES_PER_DAY - 1;
+                    saved_rides += RIDES_PER_DAY * (DAYS_PER_WEEK - 4);
+                }
+            } else if (RIDES_PER_DAY == 3) {
+                let saved_days = DAYS_PER_WEEK - 4;
+                saved_rides = 2;
+                saved_rides += saved_days * RIDES_PER_DAY;
+            } else {
+                saved_rides = (RIDES_PER_DAY * DAYS_PER_WEEK) - 10;
+            }
+
+            WEEKLY_CAP.innerHTML = "Congratulations, you hit your weekly cap! 🎉 You gained " + saved_rides + " FREE 🎁 rides!";
+
+        } else { // UNDER WEEKLY FARE CAP
             capped_weekly_cost = capped_daily_rides * DAYS_PER_WEEK * fare;
 
             if (weekly_rides > 1) {
