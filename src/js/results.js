@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 capped_weekly_cost = capped_weekly_rides * REGULAR_FARE;
     
                 WEEKLY_COST_HEADING.textContent = '$' + capped_weekly_cost + ' for ' + WEEKLY_RIDES + ' ride' + WEEKLY_RIDES_PLURAL;
-                WEEKLY_COST_BODY.innerHTML = 'You pay $' + capped_weekly_cost + ' for ' + WEEKLY_RIDES + ' ride' + WEEKLY_RIDES_PLURAL + '.<br>Weekly fare cap of $' + REGULAR_FARE * 10 + " was not met.";
+                WEEKLY_COST_BODY.innerHTML = 'With fare capping you never pay more than $20 a week. Once you hit the cap, additional rides on Metro are FREE 🎁.';
                 
             } else if (capped_weekly_rides == 10) { // at weekly cap
     
@@ -162,7 +162,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 capped_weekly_cost = capped_weekly_rides * REDUCED_FARE;
     
                 WEEKLY_COST_HEADING.textContent = '$' + capped_weekly_cost + ' for ' + WEEKLY_RIDES + ' ride' + WEEKLY_RIDES_PLURAL;
-                WEEKLY_COST_BODY.innerHTML = 'You pay $' + capped_weekly_cost + ' for ' + WEEKLY_RIDES + ' ride' + WEEKLY_RIDES_PLURAL + '.<br>Weekly fare cap of $' + REDUCED_FARE * 8 + " was not met.";
+                WEEKLY_COST_BODY.innerHTML = 'With fare capping you never pay more than $8 a week. Once you hit the cap, additional rides on Metro are FREE 🎁.';
                 
             } else if (capped_weekly_rides == 8) { // at weekly cap
     
