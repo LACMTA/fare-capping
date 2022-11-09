@@ -189,7 +189,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     free_daily_rides = RIDES_PER_DAY - 3;
 
                     saved_rides = free_daily_rides * 2; // days before hitting weekly cap (days 1-2)
-                    saved_rides += RIDES_PER_DAY - 1; // day of hitting weekly cap (day 3)
+                    saved_rides += RIDES_PER_DAY - 2; // day of hitting weekly cap (day 3)
                     saved_rides += RIDES_PER_DAY * (DAYS_PER_WEEK - 3); // days after hitting weekly cap (day 4+)
 
                 }
