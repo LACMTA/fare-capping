@@ -1,16 +1,28 @@
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WKEB11D849"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
 
-	{% for file in css %}
-		<link rel="stylesheet" href="{{ file | url }}">
-	{% endfor %}
+    gtag('config', 'G-WKEB11D849');
+  </script>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  {% for file in css %}
+    <link rel="stylesheet" href="{{ file | url }}">
+  {% endfor %}
 
 
-	{% for file in js-head %}
-		<script src="{{ file | url }}" ></script>
-	{% endfor %}
+  {% for file in js-head %}
+    <script src="{{ file | url }}"></script>
+  {% endfor %}
 
-	<title>{{ title }}</title>
+  <title>{{ title }}</title>
 </head>
