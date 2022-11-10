@@ -3,6 +3,11 @@ body {
   height: 100%;
 }
 
+.header-bar__translate, .header-bar__translate-clickable, #google_translate_element, .goog-te-gadget, .goog-te-gadget-simple {
+  border: 0;
+}
+
+
 .text-semibold {
   font-weight: 600;
 }
