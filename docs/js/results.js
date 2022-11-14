@@ -93,7 +93,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 let free_daily_rides = 0;
                 let saved_rides = 0;
-    cap
                 if (RIDES_PER_DAY < 3) { // under daily cap
 
                     saved_rides = (RIDES_PER_DAY * DAYS_PER_WEEK) - 10; // no free rides from daily cap
