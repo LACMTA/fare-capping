@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 capped_daily_rides = 3;
 
                 DAILY_COST_HEADING.textContent = '$6 for ' + RIDES_PER_DAY + ' ride' + DAILY_RIDES_PLURAL;
-                DAILY_COST_BODY.innerHTML = "Congratulations, you hit your daily cap! 🎉 Every ride after is FREE 🎁!";
+                DAILY_COST_BODY.innerHTML = "You hit your daily cap! 🎉 Every ride after is FREE 🎁!";
 
             } else if (RIDES_PER_DAY > 3) {  // over daily cap
 
@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 let saved_rides_plural = saved_rides == 1 ? '' : 's';
 
                 DAILY_COST_HEADING.textContent = '$6 for ' + RIDES_PER_DAY + ' ride' + DAILY_RIDES_PLURAL;
-                DAILY_COST_BODY.innerHTML = 'Congratulations, you hit your daily cap! 🎉 You gained ' + saved_rides + ' FREE 🎁 ride' + saved_rides_plural + ' per day!';
+                DAILY_COST_BODY.innerHTML = 'You hit your daily cap! 🎉 You gained ' + saved_rides + ' FREE 🎁 ride' + saved_rides_plural + ' per day!';
 
             }
 
@@ -87,13 +87,13 @@ document.addEventListener('DOMContentLoaded', () => {
             } else if (capped_weekly_rides == 10) { // at weekly cap
     
                 WEEKLY_COST_HEADING.textContent = '$20 for ' + WEEKLY_RIDES + ' ride' + WEEKLY_RIDES_PLURAL;
-                WEEKLY_COST_BODY.innerHTML = "Congratulations, you hit your weekly cap! 🎉 Every ride after is FREE 🎁!";
+                WEEKLY_COST_BODY.innerHTML = "You hit your weekly cap! 🎉 Every ride after is FREE 🎁!";
     
             } else if (capped_weekly_rides > 10) { // over weekly cap
 
                 let free_daily_rides = 0;
                 let saved_rides = 0;
-    
+    cap
                 if (RIDES_PER_DAY < 3) { // under daily cap
 
                     saved_rides = (RIDES_PER_DAY * DAYS_PER_WEEK) - 10; // no free rides from daily cap
@@ -114,7 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
                 
                 WEEKLY_COST_HEADING.textContent = '$20 for ' + WEEKLY_RIDES + ' ride' + WEEKLY_RIDES_PLURAL;
-                WEEKLY_COST_BODY.innerHTML = "Congratulations, you hit your weekly cap! 🎉 You gained " + saved_rides + " FREE 🎁 rides!";
+                WEEKLY_COST_BODY.innerHTML = "You hit your weekly cap! 🎉 You gained " + saved_rides + " FREE 🎁 rides!";
             }
             break;
         
@@ -138,7 +138,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 capped_daily_rides = 3;
 
                 DAILY_COST_HEADING.textContent = '$3 for ' + RIDES_PER_DAY + ' ride' + DAILY_RIDES_PLURAL;
-                DAILY_COST_BODY.innerHTML = "Congratulations, you hit your daily cap! 🎉 Every ride after is FREE 🎁!";
+                DAILY_COST_BODY.innerHTML = "You hit your daily cap! 🎉 Every ride after is FREE 🎁!";
 
             } else if (RIDES_PER_DAY > 3) {  // over daily cap
 
@@ -148,7 +148,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 let saved_rides_plural = saved_rides == 1 ? '' : 's';
 
                 DAILY_COST_HEADING.textContent = '$3 for ' + RIDES_PER_DAY + ' ride' + DAILY_RIDES_PLURAL;
-                DAILY_COST_BODY.innerHTML = 'Congratulations, you hit your daily cap! 🎉 You gained ' + saved_rides + ' FREE 🎁 ride' + saved_rides_plural + ' per day!';
+                DAILY_COST_BODY.innerHTML = 'You hit your daily cap! 🎉 You gained ' + saved_rides + ' FREE 🎁 ride' + saved_rides_plural + ' per day!';
 
             }
 
@@ -167,7 +167,7 @@ document.addEventListener('DOMContentLoaded', () => {
             } else if (capped_weekly_rides == 8) { // at weekly cap
     
                 WEEKLY_COST_HEADING.textContent = '$8 for ' + WEEKLY_RIDES + ' ride' + WEEKLY_RIDES_PLURAL;
-                WEEKLY_COST_BODY.innerHTML = "Congratulations, you hit your weekly cap! 🎉 Every ride after is FREE 🎁!";
+                WEEKLY_COST_BODY.innerHTML = "You hit your weekly cap! 🎉 Every ride after is FREE 🎁!";
     
             } else if (capped_weekly_rides > 8) { // over weekly cap
 
@@ -195,7 +195,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
                 
                 WEEKLY_COST_HEADING.textContent = '$8 for ' + WEEKLY_RIDES + ' ride' + WEEKLY_RIDES_PLURAL;
-                WEEKLY_COST_BODY.innerHTML = "Congratulations, you hit your weekly cap! 🎉 You gained " + saved_rides + " FREE 🎁 rides!";
+                WEEKLY_COST_BODY.innerHTML = "You hit your weekly cap! 🎉 You gained " + saved_rides + " FREE 🎁 rides!";
             }
             break;
         default:
